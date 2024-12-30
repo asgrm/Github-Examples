@@ -1,3 +1,4 @@
+name: sheduled hello world
 on:
   schedule:
     - cron: '*/2 * * * *'
