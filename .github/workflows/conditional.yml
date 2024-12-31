@@ -3,7 +3,7 @@ on: [ push ]
 
 jobs:
   hello-moon:
-    if: github.repository == 'octo-org/octo-repo-prod'
+    if: github.repository == 'asgrm/Github-Examples'
     runs-on: ubunty-latest
     steps:
       - name: "Hello Moon"
