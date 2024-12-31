@@ -12,5 +12,5 @@ jobs:
       - name: checkout repo
         uses: actions/checkout@v4
       - name: log event name
-        run: echo "Github event type: $GITHUB_EVENT_NAME"
+        run: echo "Event of type $GITHUB_EVENT_NAME"
 
