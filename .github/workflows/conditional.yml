@@ -1,0 +1,16 @@
+name: Conditional sample workflow
+on: [ push ]
+
+jobs:
+  hello-moon:
+    if: github.repository == 'octo-org/octo-repo-prod'
+    runs-on: ubunty-latest
+    steps:
+      - name: "Hello Moon"
+        run: echo "Hello Moon"
+  goodbye-moon:
+    runs-on: ubunty-latest
+    steps:
+      - name: "Goodbye Moon"
+        run: echo "Goodbye Moon"
+    
