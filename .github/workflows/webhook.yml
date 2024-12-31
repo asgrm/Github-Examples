@@ -1,7 +1,7 @@
-name: "Webhook event example"
+name: Webhook event example
 
 on:
-  repositoty_dispach:
+  repositoty_dispatch:
     types:
       - webhook
 
