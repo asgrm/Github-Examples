@@ -1,0 +1,30 @@
+name: Build, Test, Deploy Worklow
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    needs: [build, test]
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v4
+      - name: App Deployment
+        run: echo "Deploying app..." 
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v4
+      - name: App Build
+        run: echo "Building app..." 
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v4
+      - name: App testing
+        run: echo "Testing app..." 
