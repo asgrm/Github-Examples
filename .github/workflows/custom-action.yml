@@ -1,0 +1,17 @@
+name: custom action
+
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Output greeting
+        id: hello
+        uses: asgrm/hello-asgrm-action@0.0.1
+        with:
+          name: 'Mona the Octocat'
+      # Use the output from the `hello` step
+      - name: Get the output
+        run: echo "The output was ${{ steps.hello.outputs.greeting }}"
