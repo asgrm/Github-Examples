@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Output greeting
         id: hello
-        uses: asgrm/hello-asgrm-action@0.0.2
+        uses: asgrm/hello-asgrm-action@0.0.3
         with:
           name: 'Mona the Octocat'
       # Use the output from the `hello` step
